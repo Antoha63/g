@@ -1,5 +1,3 @@
-const { uuid } = require('uuidv4');
-
 const uuidInput = document.getElementById("uuid-result"),
   uuidCopyIcon = document.querySelector(".uuid-box .copy-icon"),
   uuidGenerateButton = document.getElementById("generate-uuid-button");
