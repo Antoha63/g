@@ -1,10 +1,12 @@
+const { uuid } = require('uuidv4');
+
 const uuidInput = document.getElementById("uuid-result"),
   uuidCopyIcon = document.querySelector(".uuid-box .copy-icon"),
   uuidGenerateButton = document.getElementById("generate-uuid-button");
 
 //this function will be called on, page reload, uuidGenerateButton clicked & rangeInput slide
 const generateUuid = () => {
-  uuidInput.innerText = crypto.randomUUID();
+  uuidInput.innerText = uuid();
   uuidCopyIcon.classList.replace("uil-file-check-alt", "uil-copy"); //replace icon
 };
 
@@ -65,7 +67,7 @@ window.onload = () => {
           }
 
           for (let step = 0; step < count; step++) {
-            content = content + crypto.randomUUID() + "\n";
+            content = content + uuid() + "\n";
           }
 
           downloadFile(count, content);
