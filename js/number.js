@@ -107,7 +107,6 @@ function randomNum() {
             i++;
           }
         }
-        console.log("result: " + result);
         num = shuffle(result);
 
         return setResult(num);
