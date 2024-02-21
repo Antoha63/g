@@ -6,7 +6,7 @@ const uuidInput = document.getElementById("uuid-result"),
 
 //this function will be called on, page reload, uuidGenerateButton clicked & rangeInput slide
 const generateUuid = () => {
-  uuidInput.innerText = uuid();
+  uuidInput.innerText = new Crypto().randomUUID();
   uuidCopyIcon.classList.replace("uil-file-check-alt", "uil-copy"); //replace icon
 };
 
@@ -67,7 +67,7 @@ window.onload = () => {
           }
 
           for (let step = 0; step < count; step++) {
-            content = content + uuid() + "\n";
+            content = content + new Crypto().randomUUID() + "\n";
           }
 
           downloadFile(count, content);
