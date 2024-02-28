@@ -383,6 +383,7 @@ nav.close~.dashboard .top {
     margin-left: 150px;
     margin-right: 10px;
     width: 40%;
+    min-width: 100px;
     height: 40px;
 }
 
