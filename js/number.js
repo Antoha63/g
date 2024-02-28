@@ -35,10 +35,10 @@ function randomNum() {
     let num = "";
 
     if (numberCountInput.value > 1) {
-      numberP.innerText = "Your numbers:";
+      numberP.innerText = "Случайные числа:";
       numberRepeatWrapper.hidden = false;
     } else {
-      numberP.innerText = "Your number:";
+      numberP.innerText = "Случайное число:";
       numberRepeatWrapper.hidden = true;
     }
 
@@ -81,10 +81,10 @@ function randomNum() {
     let num = "";
 
     if (numberCountInput.value > 1) {
-      numberP.innerText = "Your numbers:";
+      numberP.innerText = "Случайные числа:";
       numberRepeatWrapper.hidden = false;
     } else {
-      numberP.innerText = "Your number:";
+      numberP.innerText = "Случайное число:";
       numberRepeatWrapper.hidden = true;
     }
 
