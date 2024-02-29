@@ -93,7 +93,7 @@
                     </div>
                     <div class="box box2">
                         <div class="wrapper" id="password-input-copy-icon-div">
-                            <input class="text" disabled id="password-input" />
+                            <input class="text1" disabled id="password-input" />
                             <i class="uil uil-copy copy-icon"></i>
                         </div>
 
@@ -206,7 +206,7 @@
         <div class="dash-content" id="qr-code-main-div" hidden="true">
             <div class="overview">
                 <div class="title">
-                    <span class="text">QR-code generator</span>
+                    <span class="text">Генератор QR-кодов</span>
                 </div>
 
                 <div class="qr-boxes">
@@ -215,28 +215,28 @@
                             <div id="canvas"></div>
                             <p id="qr-code-p">300px x 300px</p>
                             <div class="wrapper" id="qr-code-range-wrapper">
-                                <label for="size" id="qr-code-size-number">Size</label>
+                                <label for="size" id="qr-code-size-number">Размер</label>
                                 <input type="range" id="qr-code-range" min="300" max="2500" value="1400"
                                     class="input-1x">
                             </div>
-                            <button class="btn-download" id="btn-dl" type="button">Download</button>
+                            <button class="btn-download" id="btn-dl" type="button">Загрузить</button>
                         </div>
                     </div>
 
                     <div class="qr-box qr-box2">
                         <div class="input-wrap">
-                            <label for="data" id="qr-data-label">Text</label>
-                            <textarea id="data" class="input-1x" placeholder="Enter text..."></textarea>
+                            <label for="data" id="qr-data-label">Текст</label>
+                            <textarea id="data" class="input-1x" placeholder="Введите текст..."></textarea>
                         </div>
 
                         <div class="input-wrap">
-                            <label for="logo" id="qr-code-logo">Logo</label>
+                            <label for="logo" id="qr-code-logo">Лого</label>
                             <input type="file" id="logo" hidden>
 
                             <div class="select-menu">
                                 <div class="select-btn">
                                     <i class="img">
-                                        <img src="Images/qr/facebook.png" id="main-image">
+                                        <img src="Images/qr/telegram.png" id="main-image">
                                     </i>
                                     <i class="bx bx-chevron-down" id="select-button"></i>
                                 </div>
@@ -256,9 +256,21 @@
                                     </li>
                                     <li class="option">
                                         <i class="img">
-                                            <img src="Images/qr/facebook.png" id="facebook-image">
+                                            <img src="Images/qr/wb.png" id="wb-image">
                                         </i>
-                                        <span class="option-text">Facebook</span>
+                                        <span class="option-text">Wildberries</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/Ozon1.png" id="ozon-classic-image">
+                                        </i>
+                                        <span class="option-text">Ozon-classic</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/Ozon.png" id="ozon-image">
+                                        </i>
+                                        <span class="option-text">Ozon</span>
                                     </li>
                                     <li class="option">
                                         <i class="img">
@@ -277,6 +289,12 @@
                                             <img src="Images/qr/whatsapp.png" id="whatsapp-image">
                                         </i>
                                         <span class="option-text">WhatsApp</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/facebook.png" id="facebook-image">
+                                        </i>
+                                        <span class="option-text">Facebook</span>
                                     </li>
                                     <li class="option">
                                         <i class="img">
@@ -341,17 +359,17 @@
                                 </a>
                             </div>
                             <div class="input-3x">
-                                <button id="qr-code-clear-button" type="button">Clear</button>
+                                <button id="qr-code-clear-button" type="button">Удалить</button>
                             </div>
                         </div>
 
                         <div class="wrapper" id="qr-code-range-wrapper">
-                            <label for="logo" id="qr-code-logo">Logo size</label>
+                            <label for="logo" id="qr-code-logo">Размер лого</label>
                             <input type="range" id="qr-code-margin-range" min="0" max="40" value="0" class="input-1x">
                         </div>
 
                         <div class="input-wrap">
-                            <label for="dot" id="qr-code-dot-mode">Dot Mode</label>
+                            <label for="dot" id="qr-code-dot-mode">Стиль</label>
                             <select id="dot" class="input-1x">
                                 <option value="square">Square</option>
                                 <option value="dots">Dots</option>
@@ -363,12 +381,12 @@
                         </div>
 
                         <div class="input-wrap">
-                            <label for="dot-color" id="qr-dot-color-label">Dot Color</label>
+                            <label for="dot-color" id="qr-dot-color-label">Цвет точек</label>
                             <input type="color" id="dot-color-1" class="input-0x">
                             <input type="color" id="dot-color-2" class="input-0x">
                         </div>
                         <div class="input-wrap">
-                            <label for="bg-color" id="qr-bg-color-label">Back Color</label>
+                            <label for="bg-color" id="qr-bg-color-label">Цвет фона</label>
                             <input type="color" id="bg-color" class="input-0x" value="#ffffff">
                         </div>
                     </div>
@@ -379,27 +397,27 @@
         <div class="dash-content" id="uuid-main-div" hidden="true">
             <div class="overview">
                 <div class="title">
-                    <span class="text">UUID generator</span>
+                    <span class="text">Генератор UUID</span>
                 </div>
 
                 <div class="uuid-boxes">
                     <div class="uuid-box uuid-box1">
                         <header>
-                            <p id="uuid-p">Your Version 4 UUID:</p>
+                            <p id="uuid-p">Случайное UUID v4:</p>
                         </header>
                         <div class="wrapper" id="uuid-div">
                             <label id="uuid-result"></label>
                             <i id="uuid-icon" class="uil uil-copy copy-icon"></i>
                         </div>
-                        <button id="generate-uuid-button">Generate</button>
+                        <button id="generate-uuid-button">Сгенерировать</button>
                     </div>
                 </div>
                 <div class="uuid-boxes">
                     <div class="uuid-box  uuid-box2">
                         <div class="uuid-input-wrap">
-                            <label id="uuid-label">How many?</label>
+                            <label id="uuid-label">Количество</label>
                             <input class="text" type="number" id="uuid-input" min="1" step="1" value="1">
-                            <button id="download-uuid-button">Download file</button>
+                            <button id="download-uuid-button">Скачать файл</button>
                         </div>
                     </div>
                 </div>
