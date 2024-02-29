@@ -46,7 +46,7 @@ let op = {
     height: 300,
     type: "png",
     data: "https://www.google.com",
-    image: "Images/qr/facebook.png",
+    image: "Images/qr/telegram.png",
     dotsOptions: {
         color: "#4267b2",
         type: "rounded",
@@ -214,6 +214,15 @@ function setImage(selectedOption) {
     } else if(selectedOption == "Windows") {
         op.image = "Images/qr/windows.png";
         mainImage.src = "Images/qr/windows.png";
+    } else if(selectedOption == "Ozon") {
+        op.image = "Images/qr/Ozon.png";
+        mainImage.src = "Images/qr/Ozon.png";
+    } else if(selectedOption == "Ozon-classic") {
+        op.image = "Images/qr/Ozon1.png";
+        mainImage.src = "Images/qr/Ozon1.png";
+    } else if(selectedOption == "Wildberries") {
+        op.image = "Images/qr/wb.png";
+        mainImage.src = "Images/qr/wb.png";
     }
     
     render();
