@@ -172,8 +172,8 @@ function setImage(selectedOption) {
         op.image = "Images/qr/telegram.png";
         mainImage.src = "Images/qr/telegram.png";
     } else if(selectedOption == "Instagram") {
-        op.image = "Images/qr/instagram.png";
-        mainImage.src = "Images/qr/instagram.png";
+        op.image = "Images/qr/instagram1.png";
+        mainImage.src = "Images/qr/instagram1.png";
     } else if(selectedOption == "Facebook") {
         op.image = "Images/qr/facebook.png";
         mainImage.src = "Images/qr/facebook.png";
