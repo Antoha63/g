@@ -25,6 +25,7 @@
     --box2-color: #E6E6FA;
     --title-icon-color: #fff;
     --lilac-color: #826afb;
+    --arrow-color: black;
 
     /* ====== Transition ====== */
     --tran-05: all 0.5s ease;
@@ -48,6 +49,7 @@ body.dark {
     --box1-color: #3A3B3C;
     --box2-color: #3A3B3C;
     --title-icon-color: #CCC;
+    --arrow-color: #CCC;
 }
 
 /* === Custom Scroll Bar CSS === */
@@ -628,3 +630,70 @@ select#gender option[value="male"]   { background-image:url(Images/qr/facebook.p
         width: 100%;
     }
 }
+
+
+
+
+
+
+.dash-content .title-1 .text-1 {
+    margin-top: 50px;
+    font-size: calc(100% + 20px);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+  
+  .icon-1 {
+    margin-top: 50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+  }
+  
+  .arrow-1 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 25px;
+    width: 90%;
+    height: 10px;
+    background-color: var(--arrow-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    animation: arrow 700ms linear infinite;
+  }
+  
+  .arrow-1::after, .arrow-1::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 10px;
+    left: -8px;
+    background-color: var(--arrow-color);
+  }
+  
+  .arrow-1::after {
+    top: -12px;
+    transform: rotate(-45deg);
+  }
+  
+  .arrow-1::before {
+    top: 12px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(45deg);
+  }
