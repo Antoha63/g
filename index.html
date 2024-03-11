@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/qr-code.css">
     <link rel="stylesheet" href="css/uuid.css">
     <link rel="stylesheet" href="css/number.css">
+    <link rel="stylesheet" href="css/animation.css">
 
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -31,28 +32,6 @@
 </head>
 
 <body>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-            m[i].l = 1 * new Date();
-            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(96620078, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true
-        });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/96620078" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-    
     <nav>
         <div class="logo-name">
             <div class="logo-image">
@@ -103,6 +82,36 @@
     <section class="dashboard">
         <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
+        </div>
+
+        <div class="dash-content" id="main-div" hidden="true">
+            <div class="overview">
+                <div class="title-1">
+                    <div class="icon-1">
+                        <div class="arrow-1"></div>
+                    </div>
+                    <p class="text-1">Выберите в меню слева что хотите сгенерировать</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="dog">
+                    <div class="dog-head">
+                        <div class="dog-ears ears-left"></div>
+                        <div class="dog-ears ears-right"></div>
+                        <div class="dog-eyes"></div>
+                        <div class="dog-mouth">
+                            <div class="dog-nose"></div>
+                            <div class="dog-tongue"></div>
+                        </div>
+                    </div>
+                    <div class="dog-tail"></div>
+                    <div class="dog-body">
+                        <div class="dog-foot"></div>
+                    </div>
+                    <div class="ball"></div>
+                </div>
+            </div>
         </div>
 
         <div class="dash-content" id="password-main-div" hidden="true">
