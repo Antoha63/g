@@ -47,36 +47,41 @@ numberNavLink.addEventListener("click", () => {
 
 window.addEventListener("load", () => {
     let href = window.location.href;
-    if (href.indexOf("/password") > -1) {
+    let hash = window.location.hash;
+    let origin = window.location.origin;
+
+    if (hash === "#/password") {
         mainDiv.hidden = true;
         passwordMainDiv.hidden = false;
         qrCodeMainDiv.hidden = true;
         uuidMainDiv.hidden = true;
         numberMainDiv.hidden = true;
-    } else if (href.indexOf("/qr-code") > -1) {
+    } else if (hash === "#/qr-code") {
         mainDiv.hidden = true;
         passwordMainDiv.hidden = true;
         qrCodeMainDiv.hidden = false;
         uuidMainDiv.hidden = true;
         numberMainDiv.hidden = true;
-    } else if (href.indexOf("/uuid") > -1) {
+    } else if (hash === "#/uuid") {
         mainDiv.hidden = true;
         passwordMainDiv.hidden = true;
         qrCodeMainDiv.hidden = true;
         uuidMainDiv.hidden = false;
         numberMainDiv.hidden = true;
-    } else if (href.indexOf("/number") > -1) {
+    } else if (hash === "#/number") {
         mainDiv.hidden = true;
         passwordMainDiv.hidden = true;
         qrCodeMainDiv.hidden = true;
         uuidMainDiv.hidden = true;
         numberMainDiv.hidden = false;
-    } else {
+    } else if (href === origin || href === origin + "/") {
         mainDiv.hidden = false;
         passwordMainDiv.hidden = true;
         qrCodeMainDiv.hidden = true;
         uuidMainDiv.hidden = true;
         numberMainDiv.hidden = true;
+    } else {
+        
     }
 
     arrow.animate([
