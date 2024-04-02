@@ -705,3 +705,9 @@ select#gender option[value="male"] {
     box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
     transform: rotate(45deg);
 }
+
+#yandex_rtb_R-A-7158601-2,
+#yandex_rtb_R-A-7158601-3,
+#yandex_rtb_R-A-7158601-4 {
+    margin-top: 12%;
+}
