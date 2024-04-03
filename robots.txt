@@ -1,0 +1,8 @@
+User-agent: Yandex
+Allow: /
+Allow: /#/password
+Allow: /#/qr-code
+Allow: /#/uuid
+Allow: /#/number
+Allow: /favicon.svg
+Clean-param: ref /
