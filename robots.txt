@@ -5,4 +5,6 @@ Allow: /#/qr-code
 Allow: /#/uuid
 Allow: /#/number
 Allow: /favicon.svg
+Allow: /sitemap.xml
+Sitemap: https://multi-generator.ru/sitemap.xml
 Clean-param: ref /
