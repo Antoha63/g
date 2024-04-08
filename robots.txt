@@ -1,4 +1,5 @@
 User-agent: Yandex
+Clean-param: etext
 Allow: /
 Allow: /#/password
 Allow: /#/qr-code
@@ -7,4 +8,3 @@ Allow: /#/number
 Allow: /favicon.svg
 Allow: /sitemap.xml
 Sitemap: https://multi-generator.ru/sitemap.xml
-Clean-param: etext
