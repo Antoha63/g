@@ -1,5 +1,6 @@
 User-agent: Yandex
 Clean-param: etext
+
 Allow: /#/password
 Allow: /#/qr-code
 Allow: /#/uuid
