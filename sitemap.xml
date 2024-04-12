@@ -7,25 +7,25 @@
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://multi-generator.ru/password</loc>
+        <loc>https://multi-generator.ru/#/password</loc>
         <lastmod>2024-04-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://multi-generator.ru/qr-code</loc>
+        <loc>https://multi-generator.ru/#/qr-code</loc>
         <lastmod>2024-04-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://multi-generator.ru/uuid</loc>
+        <loc>https://multi-generator.ru/#/uuid</loc>
         <lastmod>2024-04-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://multi-generator.ru/number</loc>
+        <loc>https://multi-generator.ru/#/number</loc>
         <lastmod>2024-04-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
