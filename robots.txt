@@ -1,10 +1,10 @@
 User-agent: Yandex
 Clean-param: etext
 
-Allow: /password
-Allow: /qr-code
-Allow: /uuid
-Allow: /number
+Allow: /#/password
+Allow: /#/qr-code
+Allow: /#/uuid
+Allow: /#/number
 Allow: /favicon.svg
 Allow: /sitemap.xml
 Sitemap: https://multi-generator.ru/sitemap.xml
