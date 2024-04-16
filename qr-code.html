@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="application/octet-stream">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noyaca" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Генератор чисел, генератор QR-кодов, генератор паролей, генератор UUID">
+    <meta name="keywords"
+        content="генератор случайных чисел онлайн, генератор случайных чисел, случайные числа, случайное число, последовательность случайных чисел, генератор паролей онлайн, генератор паролей, случайный пароль, сгенерировать пароль онлайн, сгенерировать пароль">
+    <meta name="author" content="multi-generator team">
+    <!-- <meta name="google-site-verification" content="0DdMdxFKWY0VY_YN7zUxdyLwDRyiYmuG8v3REBLdcNY"> -->
+
+    <title>Generator</title>
+
+    <!-- Yandex.Metrika counter -->
+    <!-- <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(96620078, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/96620078" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript> -->
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- <meta name="yandex-verification" content="0ff0590bc09b910d" /> -->
+
+    <!-- Yandex.RTB -->
+    <!-- <script>window.yaContextCb = window.yaContextCb || []</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script> -->
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/qr-code.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+
+    <link rel="icon" href="https://multi-generator.ru/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="Images/logo-111.png" alt="">
+            </div>
+
+            <span class="logo_name">Generator</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li id="password-nav-link"><a href="/password.html">
+                        <i class="bx bx-lock-alt icon"></i>
+                        <span class="link-name">Пароль</span>
+                    </a></li>
+
+                <li id="qr-code-nav-link"><a href="/qr-code.html">
+                        <i class="bx bx-qr icon"></i>
+                        <span class="link-name">QR-код</span>
+                    </a></li>
+
+                <li id="uuid-nav-link"><a href="/uuid.html">
+                        <i class='icon'>U</i>
+                        <span class="link-name">UUID</span>
+                    </a></li>
+
+                <li id="number-nav-link"><a href="/number.html">
+                        <i class='icon'>5</i>
+                        <span class="link-name">Число</span>
+                    </a></li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Тёмная тема</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+        </div>
+
+        <div class="dash-content" id="qr-code-main-div">
+            <div class="overview">
+                <div class="title">
+                    <span class="text">Генератор QR-кодов</span>
+                </div>
+
+                <div class="qr-boxes">
+                    <div class="qr-box qr-box1">
+                        <div class="display" id="qr-code-display">
+                            <div id="canvas"></div>
+                            <p id="qr-code-p">300px x 300px</p>
+                            <div class="wrapper" id="qr-code-range-wrapper">
+                                <label for="size" id="qr-code-size-number">Размер</label>
+                                <input type="range" id="qr-code-range" min="300" max="2500" value="1400"
+                                    class="input-1x">
+                            </div>
+                            <button class="btn-download" id="btn-dl" type="button">Загрузить</button>
+                        </div>
+                    </div>
+
+                    <div class="qr-box qr-box2">
+                        <div class="input-wrap">
+                            <label for="data" id="qr-data-label">Текст</label>
+                            <textarea id="data" class="input-1x" placeholder="Введите текст..."></textarea>
+                        </div>
+
+                        <div class="input-wrap">
+                            <label for="logo" id="qr-code-logo">Лого</label>
+                            <input type="file" id="logo" hidden>
+
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <i class="img">
+                                        <img src="Images/qr/telegram.png" id="main-image">
+                                    </i>
+                                    <i class="bx bx-chevron-down" id="select-button"></i>
+                                </div>
+
+                                <ul class="options">
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/telegram.png" id="telegram-image">
+                                        </i>
+                                        <span class="option-text">Telegram</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/instagram1.png" id="instagram-image">
+                                        </i>
+                                        <span class="option-text">Instagram</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/wb.png" id="wb-image">
+                                        </i>
+                                        <span class="option-text">Wildberries</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/Ozon1.png" id="ozon-classic-image">
+                                        </i>
+                                        <span class="option-text">Ozon-classic</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/Ozon.png" id="ozon-image">
+                                        </i>
+                                        <span class="option-text">Ozon</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/youtube.png" id="youtube-image">
+                                        </i>
+                                        <span class="option-text">Youtube</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/twitter.png" id="twitter-image">
+                                        </i>
+                                        <span class="option-text">Twitter</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/whatsapp.png" id="whatsapp-image">
+                                        </i>
+                                        <span class="option-text">WhatsApp</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/facebook.png" id="facebook-image">
+                                        </i>
+                                        <span class="option-text">Facebook</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/tiktok.png" id="tiktok-image">
+                                        </i>
+                                        <span class="option-text">TikTok</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/twitch.png" id="twitch-image">
+                                        </i>
+                                        <span class="option-text">Twitch</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/github.png" id="github-image">
+                                        </i>
+                                        <span class="option-text">GitHub</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/vk.png" id="vk-image">
+                                        </i>
+                                        <span class="option-text">VK</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/linkedin.png" id="linkedin-image">
+                                        </i>
+                                        <span class="option-text">LinkedIn</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/bitcoin.png" id="bitcoin-image">
+                                        </i>
+                                        <span class="option-text">Bitcoin</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/apple.png" id="apple-image">
+                                        </i>
+                                        <span class="option-text">Apple</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/android.png" id="android-image">
+                                        </i>
+                                        <span class="option-text">Android</span>
+                                    </li>
+                                    <li class="option">
+                                        <i class="img">
+                                            <img src="Images/qr/windows.png" id="windows-image">
+                                        </i>
+                                        <span class="option-text">Windows</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="input-2x">
+                                <a href="javascript:browse()">
+                                    <span class="material-symbols-outlined" id="photo-camera">photo_camera</span>
+                                </a>
+                            </div>
+                            <div class="input-3x">
+                                <button id="qr-code-clear-button" type="button">Удалить</button>
+                            </div>
+                        </div>
+
+                        <div class="wrapper" id="qr-code-range-wrapper">
+                            <label for="logo" id="qr-code-logo">Размер лого</label>
+                            <input type="range" id="qr-code-margin-range" min="0" max="40" value="0" class="input-1x">
+                        </div>
+
+                        <div class="input-wrap">
+                            <label for="dot" id="qr-code-dot-mode">Стиль</label>
+                            <select id="dot" class="input-1x">
+                                <option value="square">Square</option>
+                                <option value="dots">Dots</option>
+                                <option value="rounded">Rounded</option>
+                                <option value="extra-rounded">Extra Rounded</option>
+                                <option value="classy">Classy</option>
+                                <option value="classy-rounded">Classy Rounded</option>
+                            </select>
+                        </div>
+
+                        <div class="input-wrap">
+                            <label for="dot-color" id="qr-dot-color-label">Цвет точек</label>
+                            <input type="color" id="dot-color-1" class="input-0x">
+                            <input type="color" id="dot-color-2" class="input-0x">
+                        </div>
+                        <div class="input-wrap">
+                            <label for="bg-color" id="qr-bg-color-label">Цвет фона</label>
+                            <input type="color" id="bg-color" class="input-0x" value="#ffffff">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Yandex.RTB R-A-7158601-2 -->
+            <!-- <div id="yandex_rtb_R-A-7158601-2"></div>
+            <script>
+                window.yaContextCb.push(() => {
+                    Ya.Context.AdvManager.render({
+                        "blockId": "R-A-7158601-2",
+                        "renderTo": "yandex_rtb_R-A-7158601-2"
+                    })
+                })
+            </script> -->
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="js/qr-code.js"></script>
+</body>
+
+</html>
