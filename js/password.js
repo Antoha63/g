@@ -29,22 +29,22 @@ const generatePassword = () => {
 
     var passwordLength = newPassword.length;
     if (passwordLength < 6) {
-      passwordImage.src = "password-images/Палатка-111.png";
+      passwordImage.src = "Images/password/tent-password-complexity.png";
     } else {
       if ((allCharacters.replace("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "") == "" || allCharacters.replace("abcdefghijklmnopqrstuvwxyz", "") == "" || allCharacters.replace("0123456789", "") == "" || allCharacters.replace("^!$%&|[](){}:;.,*+-#@<>~", "") == "") && passwordLength < 10) {
-        passwordImage.src = "password-images/Маленький деревянный дом 111.png";
+        passwordImage.src = "Images/password/wooden-house-password-complexity.png";
       }
       else {
         if (passwordLength < 8) {
-          passwordImage.src = "password-images/Маленький деревянный дом 111.png";
+          passwordImage.src = "Images/password/wooden-house-password-complexity.png";
         } else {
           if (passwordLength < 12) {
-            passwordImage.src = "password-images/Маленький кирпичный дом 111.png";
+            passwordImage.src = "Images/password/brick-house-password-complexity.png";
           } else {
             if (passwordLength < 16) {
-              passwordImage.src = "password-images/Большой дом-111.png";
+              passwordImage.src = "Images/password/big-house-password-complexity.png";
             } else {
-              passwordImage.src = "password-images/Замок-111.png";
+              passwordImage.src = "Images/password/castle-password-complexity.png";
             }
           }
         }
