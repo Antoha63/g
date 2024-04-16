@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="application/octet-stream">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noyaca" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Генератор чисел, генератор QR-кодов, генератор паролей, генератор UUID">
+    <meta name="keywords"
+        content="генератор случайных чисел онлайн, генератор случайных чисел, случайные числа, случайное число, последовательность случайных чисел, генератор паролей онлайн, генератор паролей, случайный пароль, сгенерировать пароль онлайн, сгенерировать пароль">
+    <meta name="author" content="multi-generator team">
+    <!-- <meta name="google-site-verification" content="0DdMdxFKWY0VY_YN7zUxdyLwDRyiYmuG8v3REBLdcNY"> -->
+
+    <title>Generator</title>
+
+    <!-- Yandex.Metrika counter -->
+    <!-- <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(96620078, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/96620078" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript> -->
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- <meta name="yandex-verification" content="0ff0590bc09b910d" /> -->
+
+    <!-- Yandex.RTB -->
+    <!-- <script>window.yaContextCb = window.yaContextCb || []</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script> -->
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/number.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+
+    <link rel="icon" href="https://multi-generator.ru/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="Images/logo-111.png" alt="">
+            </div>
+
+            <span class="logo_name">Generator</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li id="password-nav-link"><a href="/password.html">
+                        <i class="bx bx-lock-alt icon"></i>
+                        <span class="link-name">Пароль</span>
+                    </a></li>
+
+                <li id="qr-code-nav-link"><a href="/qr-code.html">
+                        <i class="bx bx-qr icon"></i>
+                        <span class="link-name">QR-код</span>
+                    </a></li>
+
+                <li id="uuid-nav-link"><a href="/uuid.html">
+                        <i class='icon'>U</i>
+                        <span class="link-name">UUID</span>
+                    </a></li>
+
+                <li id="number-nav-link"><a href="/number.html">
+                        <i class='icon'>5</i>
+                        <span class="link-name">Число</span>
+                    </a></li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Тёмная тема</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+        </div>
+
+        <div class="dash-content" id="number-main-div">
+            <div class="overview">
+                <div class="title">
+                    <span class="text">Генератор чисел</span>
+                </div>
+
+                <div class="number-boxes">
+                    <div class="number-box box1">
+                        <div class="wrapper" id="number-div-wrap">
+                            <p id="number-p">Случайное число:</p>
+                            <div class="wrapper">
+                                <label id="result"></label>
+                            </div>
+                        </div>
+                        <button id="generate-number-button">Сгенерировать</button>
+                    </div>
+                    <div class="number-box box2">
+                        <div class="wrapper" id="number-main-range-wrapper">
+                            <div class="number-range-block" id="number-range-wrapper">
+                                <input type="radio" id="number-range-input" checked />
+                                <label for="number-range-input" id="number-range-label">Из диапазона</label>
+                            </div>
+
+                            <div class="number-range-block" id="number-list-wrapper">
+                                <input type="radio" id="number-list-input" />
+                                <label for="number-list-input" id="number-list-label">Из списка</label>
+                            </div>
+                        </div>
+
+                        <div class="number-input-wrap">
+                            <div class="number-input-wrapper" id="number-min-input-wrapper">
+                                <label for="min" id="min-number-label">От:</label>
+                                <input class="text" type="number" id="min-number-input" value="0">
+                            </div>
+                            <div class="number-input-wrapper" id="number-max-input-wrapper">
+                                <label for="max" id="max-number-label">До:</label>
+                                <input class="text" type="number" id="max-number-input" value="10">
+                            </div>
+                            <textarea id="number-list-textarea" hidden
+                                placeholder="Введите числа через пробел..."></textarea>
+                        </div>
+
+                        <div class="wrapper" id="number-count-wrapper">
+                            <label id="number-count-label">Количество</label>
+                            <input type="range" min="1" max="40" value="1" id="number-count-input" />
+                            <span class="slider-number" id="number-count-slider">1</span>
+                        </div>
+
+                        <div class="number-block" id="number-repeat-wrapper" hidden>
+                            <input type="checkbox" id="number-repeat-checkbox" />
+                            <label for="number-repeat-checkbox" id="number-repeat-label">Исключить повторения</label>
+                        </div>
+
+                        <div class="number-block" id="number-checkbox-wrapper">
+                            <input type="checkbox" id="number-checkbox" />
+                            <label for="number-checkbox" id="number-label">Исключить числа</label>
+                        </div>
+                        <textarea id="number-textarea" hidden="true"
+                            placeholder="Введите числа через пробел..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- Yandex.RTB R-A-7158601-4 -->
+            <!-- <div id="yandex_rtb_R-A-7158601-4"></div>
+            <script>
+                window.yaContextCb.push(() => {
+                    Ya.Context.AdvManager.render({
+                        "blockId": "R-A-7158601-4",
+                        "renderTo": "yandex_rtb_R-A-7158601-4"
+                    })
+                })
+            </script> -->
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="js/number.js"></script>
+</body>
+
+</html>
