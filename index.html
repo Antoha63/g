@@ -8,35 +8,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Генератор чисел, генератор QR-кодов, генератор паролей, генератор UUID">
-    <meta name="keywords" content="генератор случайных чисел онлайн, генератор случайных чисел, случайные числа, случайное число, последовательность случайных чисел, генератор паролей онлайн, генератор паролей, случайный пароль, сгенерировать пароль онлайн, сгенерировать пароль">
+    <meta name="keywords"
+        content="генератор случайных чисел онлайн, генератор случайных чисел, случайные числа, случайное число, последовательность случайных чисел, генератор паролей онлайн, генератор паролей, случайный пароль, сгенерировать пароль онлайн, сгенерировать пароль">
     <meta name="author" content="multi-generator team">
     <meta name="google-site-verification" content="0DdMdxFKWY0VY_YN7zUxdyLwDRyiYmuG8v3REBLdcNY">
 
     <title>Generator</title>
-    
-    <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(96620078, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/96620078" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(96620078, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/96620078" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 
     <meta name="yandex-verification" content="0ff0590bc09b910d" />
 
     <!-- Yandex.RTB -->
-<script>window.yaContextCb=window.yaContextCb||[]</script>
-<script src="https://yandex.ru/ads/system/context.js" async></script>
+    <script>window.yaContextCb = window.yaContextCb || []</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
 
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="style.css">
@@ -73,22 +78,22 @@
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li id="password-nav-link"><a href="#/password">
+                <li id="password-nav-link"><a href="/password.html">
                         <i class="bx bx-lock-alt icon"></i>
                         <span class="link-name">Пароль</span>
                     </a></li>
 
-                <li id="qr-code-nav-link"><a href="#/qr-code">
+                <li id="qr-code-nav-link"><a href="/qr-code.html">
                         <i class="bx bx-qr icon"></i>
                         <span class="link-name">QR-код</span>
                     </a></li>
 
-                <li id="uuid-nav-link"><a href="#/uuid">
+                <li id="uuid-nav-link"><a href="/uuid.html">
                         <i class='icon'>U</i>
                         <span class="link-name">UUID</span>
                     </a></li>
 
-                <li id="number-nav-link"><a href="#/number">
+                <li id="number-nav-link"><a href="/number.html">
                         <i class='icon'>5</i>
                         <span class="link-name">Число</span>
                     </a></li>
@@ -114,7 +119,7 @@
             <i class="uil uil-bars sidebar-toggle"></i>
         </div>
 
-        <div class="dash-content" id="main-div" hidden="true">
+        <div class="dash-content" id="main-div">
             <div class="overview">
                 <div class="title-1">
                     <div class="icon-1">
@@ -143,476 +148,10 @@
                 </div>
             </div>
         </div>
-
-        <div class="dash-content" id="password-main-div" hidden="true">
-            <div class="overview">
-                <div class="title">
-                    <span class="text">Генератор паролей</span>
-                </div>
-
-                <div class="boxes">
-                    <div class="box box1">
-                        <img id="password-image" src="password-images/Палатка-111.png">
-                    </div>
-                    <div class="box box2">
-                        <div class="wrapper" id="password-input-copy-icon-div">
-                            <input class="text1" disabled id="password-input" />
-                            <i class="uil uil-copy copy-icon"></i>
-                        </div>
-
-                        <div class="wrapper" id="password-button-div">
-                            <button class="generate-button" id="password-button">Сгенерировать</button>
-                        </div>
-
-                        <div class="wrapper" id="password-range-wrapper">
-                            <input type="range" min="1" max="40" value="4" id="password-range" />
-                            <span class="slider-number" id="password-slider-number">4</span>
-                        </div>
-
-                        <div class="wrapper" id="password-checkbox-wrapper">
-                            <div class="block" id="password-ABC-checkbox-wrapper">
-                                <input type="checkbox" id="ABC-check" checked />
-                                <label for="ABC-check" id="ABC-label">ABC</label>
-                            </div>
-
-                            <div class="block" id="password-abc-checkbox-wrapper">
-                                <input type="checkbox" id="abc-check" />
-                                <label for="abc-check" id="abc-label">abc</label>
-                            </div>
-
-                            <div class="block" id="password-number-checkbox-wrapper">
-                                <input type="checkbox" id="number-check" />
-                                <label for="number-check" id="number1-label">123</label>
-                            </div>
-
-                            <div class="block" id="password-spec-checkbox-wrapper">
-                                <input type="checkbox" id="spec-check" />
-                                <label for="spec-check" id="spec-label">#$&</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="password-main-info-div" hidden="true">
-		<!-- Yandex.RTB R-A-7158601-1 -->
-<div id="yandex_rtb_R-A-7158601-1"></div>
-<script>
-window.yaContextCb.push(()=>{
-	Ya.Context.AdvManager.render({
-		"blockId": "R-A-7158601-1",
-		"renderTo": "yandex_rtb_R-A-7158601-1"
-	})
-})
-</script>
-            <div class="info-content">
-                <div class="boxes1">
-                    <div class="box box3" id="info-content-box">
-                        <h2>Какой пароль является надёжным?</h2>
-                        <p>
-                            Надёжность пароля зависит от трёх факторов: размер, уникальность и случайность.
-                            Чем больше случайных символов в пароле, тем более надёжным он является.
-                            Также для большей надёжности не рекомендуется использовать один и тот же пароль в нескольких
-                            различных
-                            системах.
-                            С помощью нашего генератора Вы сможете создать наиболее надёжный пароль.
-                        </p>
-                    </div>
-                    <div class="box box4">
-                        <img id="password-info-image1" src="Images/password/password1.jpg">
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-content">
-                <div class="boxes2">
-                    <div class="box box3">
-                        <img id="password-info-image2" src="Images/password/password2.jpg">
-                    </div>
-                    <div class="box box4" id="info-content-box">
-                        <h2>Почему пароль должен быть уникальным?</h2>
-                        <p>
-                            Если пользователь использует один и тот же пароль в разных системах, то он становится лёгкой
-                            мишенью для хакеров/взломщиков.
-                            Ведь при взломе одной из систем злоумышленнику становятся доступны и другие системы с
-                            одинаковым
-                            паролем
-                            у конкретного пользователя.
-                            С помощью нашего генератора Вы сможете создать много уникальных и надёжных паролей.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-content">
-                <div class="boxes1">
-                    <div class="box box3" id="info-content-box">
-                        <h2>Почему пароль должен быть случайным?</h2>
-                        <p>
-                            Чем более случайня последовательность символов в пароле, тем он надёжнее.
-                            Людям тяжело придумать по-настоящему случайную последовательность символов.
-                            Любой придуманный человеком пароль будет воплощением его сознания или подсознания, из-за
-                            чего
-                            комбинация
-                            символов будет менее случайной, а пароль будет более лёгкой мишенью для взломщиков и
-                            хакеров.
-                            С помощью нашего генератора Вы сможете создать наиболее случайный и надёжный пароль.
-                        </p>
-                    </div>
-                    <div class="box box4">
-                        <img id="password-info-image2" src="Images/password/password4.jpg">
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-content">
-                <div class="boxes2">
-                    <div class="box box3">
-                        <img id="password-info-image1" src="Images/password/password5.jpg">
-                    </div>
-                    <div class="box box4" id="info-content-box">
-                        <h2>Для чего нужен надёжный пароль?</h2>
-                        <p>
-                            Надежный пароль – это главный барьер, который мешает взломать большинство Ваших аккаунтов в
-                            сети.
-                            Каждый день в интернете взламывается огромное количество аккаунтов и ресурсов.
-                            Более 80% утечек персональных данных происходит из-за слабого или повторно-использованного
-                            пароля.
-                            Чтобы не подвергать себя риску кражи персональных данных и не стать жертвой вымогательства
-                            или
-                            утечки
-                            данных карт/номеров телефонов/адресов - необходимо создавать надёжные пароли, которые могут
-                            противостоять усилиям хакеров, вооруженных самыми современными средствами взлома.
-                            А наш генератор паролей поможет Вам создать максимально надёжный пароль.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="dash-content" id="qr-code-main-div" hidden="true">
-            <div class="overview">
-                <div class="title">
-                    <span class="text">Генератор QR-кодов</span>
-                </div>
-
-                <div class="qr-boxes">
-                    <div class="qr-box qr-box1">
-                        <div class="display" id="qr-code-display">
-                            <div id="canvas"></div>
-                            <p id="qr-code-p">300px x 300px</p>
-                            <div class="wrapper" id="qr-code-range-wrapper">
-                                <label for="size" id="qr-code-size-number">Размер</label>
-                                <input type="range" id="qr-code-range" min="300" max="2500" value="1400"
-                                    class="input-1x">
-                            </div>
-                            <button class="btn-download" id="btn-dl" type="button">Загрузить</button>
-                        </div>
-                    </div>
-
-                    <div class="qr-box qr-box2">
-                        <div class="input-wrap">
-                            <label for="data" id="qr-data-label">Текст</label>
-                            <textarea id="data" class="input-1x" placeholder="Введите текст..."></textarea>
-                        </div>
-
-                        <div class="input-wrap">
-                            <label for="logo" id="qr-code-logo">Лого</label>
-                            <input type="file" id="logo" hidden>
-
-                            <div class="select-menu">
-                                <div class="select-btn">
-                                    <i class="img">
-                                        <img src="Images/qr/telegram.png" id="main-image">
-                                    </i>
-                                    <i class="bx bx-chevron-down" id="select-button"></i>
-                                </div>
-
-                                <ul class="options">
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/telegram.png" id="telegram-image">
-                                        </i>
-                                        <span class="option-text">Telegram</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/instagram1.png" id="instagram-image">
-                                        </i>
-                                        <span class="option-text">Instagram</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/wb.png" id="wb-image">
-                                        </i>
-                                        <span class="option-text">Wildberries</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/Ozon1.png" id="ozon-classic-image">
-                                        </i>
-                                        <span class="option-text">Ozon-classic</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/Ozon.png" id="ozon-image">
-                                        </i>
-                                        <span class="option-text">Ozon</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/youtube.png" id="youtube-image">
-                                        </i>
-                                        <span class="option-text">Youtube</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/twitter.png" id="twitter-image">
-                                        </i>
-                                        <span class="option-text">Twitter</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/whatsapp.png" id="whatsapp-image">
-                                        </i>
-                                        <span class="option-text">WhatsApp</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/facebook.png" id="facebook-image">
-                                        </i>
-                                        <span class="option-text">Facebook</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/tiktok.png" id="tiktok-image">
-                                        </i>
-                                        <span class="option-text">TikTok</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/twitch.png" id="twitch-image">
-                                        </i>
-                                        <span class="option-text">Twitch</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/github.png" id="github-image">
-                                        </i>
-                                        <span class="option-text">GitHub</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/vk.png" id="vk-image">
-                                        </i>
-                                        <span class="option-text">VK</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/linkedin.png" id="linkedin-image">
-                                        </i>
-                                        <span class="option-text">LinkedIn</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/bitcoin.png" id="bitcoin-image">
-                                        </i>
-                                        <span class="option-text">Bitcoin</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/apple.png" id="apple-image">
-                                        </i>
-                                        <span class="option-text">Apple</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/android.png" id="android-image">
-                                        </i>
-                                        <span class="option-text">Android</span>
-                                    </li>
-                                    <li class="option">
-                                        <i class="img">
-                                            <img src="Images/qr/windows.png" id="windows-image">
-                                        </i>
-                                        <span class="option-text">Windows</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="input-2x">
-                                <a href="javascript:browse()">
-                                    <span class="material-symbols-outlined" id="photo-camera">photo_camera</span>
-                                </a>
-                            </div>
-                            <div class="input-3x">
-                                <button id="qr-code-clear-button" type="button">Удалить</button>
-                            </div>
-                        </div>
-
-                        <div class="wrapper" id="qr-code-range-wrapper">
-                            <label for="logo" id="qr-code-logo">Размер лого</label>
-                            <input type="range" id="qr-code-margin-range" min="0" max="40" value="0" class="input-1x">
-                        </div>
-
-                        <div class="input-wrap">
-                            <label for="dot" id="qr-code-dot-mode">Стиль</label>
-                            <select id="dot" class="input-1x">
-                                <option value="square">Square</option>
-                                <option value="dots">Dots</option>
-                                <option value="rounded">Rounded</option>
-                                <option value="extra-rounded">Extra Rounded</option>
-                                <option value="classy">Classy</option>
-                                <option value="classy-rounded">Classy Rounded</option>
-                            </select>
-                        </div>
-
-                        <div class="input-wrap">
-                            <label for="dot-color" id="qr-dot-color-label">Цвет точек</label>
-                            <input type="color" id="dot-color-1" class="input-0x">
-                            <input type="color" id="dot-color-2" class="input-0x">
-                        </div>
-                        <div class="input-wrap">
-                            <label for="bg-color" id="qr-bg-color-label">Цвет фона</label>
-                            <input type="color" id="bg-color" class="input-0x" value="#ffffff">
-                        </div>
-                    </div>
-                </div>
-            </div>
-	    <!-- Yandex.RTB R-A-7158601-2 -->
-<div id="yandex_rtb_R-A-7158601-2"></div>
-<script>
-window.yaContextCb.push(()=>{
-	Ya.Context.AdvManager.render({
-		"blockId": "R-A-7158601-2",
-		"renderTo": "yandex_rtb_R-A-7158601-2"
-	})
-})
-</script>
-        </div>
-
-        <div class="dash-content" id="uuid-main-div" hidden="true">
-            <div class="overview">
-                <div class="title">
-                    <span class="text">Генератор UUID</span>
-                </div>
-
-                <div class="uuid-boxes">
-                    <div class="uuid-box uuid-box1">
-                        <header>
-                            <p id="uuid-p">Случайное UUID v4:</p>
-                        </header>
-                        <div class="wrapper" id="uuid-div">
-                            <label id="uuid-result"></label>
-                            <i id="uuid-icon" class="uil uil-copy copy-icon"></i>
-                        </div>
-                        <button id="generate-uuid-button">Сгенерировать</button>
-                    </div>
-                </div>
-                <div class="uuid-boxes">
-                    <div class="uuid-box  uuid-box2">
-                        <div class="uuid-input-wrap">
-                            <label id="uuid-label">Количество</label>
-                            <input class="text" type="number" id="uuid-input" min="1" step="1" value="1">
-                            <button id="download-uuid-button">Скачать файл</button>
-                        </div>
-                    </div>
-                </div>
-		<!-- Yandex.RTB R-A-7158601-3 -->
-<div id="yandex_rtb_R-A-7158601-3"></div>
-<script>
-window.yaContextCb.push(()=>{
-	Ya.Context.AdvManager.render({
-		"blockId": "R-A-7158601-3",
-		"renderTo": "yandex_rtb_R-A-7158601-3"
-	})
-})
-</script>
-            </div>
-        </div>
-
-        <div class="dash-content" id="number-main-div" hidden="true">
-            <div class="overview">
-                <div class="title">
-                    <span class="text">Генератор чисел</span>
-                </div>
-
-                <div class="number-boxes">
-                    <div class="number-box box1">
-                        <div class="wrapper" id="number-div-wrap">
-                            <p id="number-p">Случайное число:</p>
-                            <div class="wrapper">
-                                <label id="result"></label>
-                            </div>
-                        </div>
-                        <button id="generate-number-button">Сгенерировать</button>
-                    </div>
-                    <div class="number-box box2">
-                        <div class="wrapper" id="number-main-range-wrapper">
-                            <div class="number-range-block" id="number-range-wrapper">
-                                <input type="radio" id="number-range-input" checked />
-                                <label for="number-range-input" id="number-range-label">Из диапазона</label>
-                            </div>
-
-                            <div class="number-range-block" id="number-list-wrapper">
-                                <input type="radio" id="number-list-input" />
-                                <label for="number-list-input" id="number-list-label">Из списка</label>
-                            </div>
-                        </div>
-
-                        <div class="number-input-wrap">
-                            <div class="number-input-wrapper" id="number-min-input-wrapper">
-                                <label for="min" id="min-number-label">От:</label>
-                                <input class="text" type="number" id="min-number-input" value="0">
-                            </div>
-                            <div class="number-input-wrapper" id="number-max-input-wrapper">
-                                <label for="max" id="max-number-label">До:</label>
-                                <input class="text" type="number" id="max-number-input" value="10">
-                            </div>
-                            <textarea id="number-list-textarea" hidden
-                                placeholder="Введите числа через пробел..."></textarea>
-                        </div>
-
-                        <div class="wrapper" id="number-count-wrapper">
-                            <label id="number-count-label">Количество</label>
-                            <input type="range" min="1" max="40" value="1" id="number-count-input" />
-                            <span class="slider-number" id="number-count-slider">1</span>
-                        </div>
-
-                        <div class="number-block" id="number-repeat-wrapper" hidden>
-                            <input type="checkbox" id="number-repeat-checkbox" />
-                            <label for="number-repeat-checkbox" id="number-repeat-label">Исключить повторения</label>
-                        </div>
-
-                        <div class="number-block" id="number-checkbox-wrapper">
-                            <input type="checkbox" id="number-checkbox" />
-                            <label for="number-checkbox" id="number-label">Исключить числа</label>
-                        </div>
-                        <textarea id="number-textarea" hidden="true"
-                            placeholder="Введите числа через пробел..."></textarea>
-                    </div>
-                </div>
-            </div>
-		<!-- Yandex.RTB R-A-7158601-4 -->
-<div id="yandex_rtb_R-A-7158601-4"></div>
-<script>
-window.yaContextCb.push(()=>{
-	Ya.Context.AdvManager.render({
-		"blockId": "R-A-7158601-4",
-		"renderTo": "yandex_rtb_R-A-7158601-4"
-	})
-})
-</script>
-        </div>
     </section>
 
     <script src="js/script.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/password.js"></script>
-    <script src="js/qr-code.js"></script>
-    <script src="js/uuid.js"></script>
-    <script src="js/number.js"></script>
 </body>
 
 </html>
