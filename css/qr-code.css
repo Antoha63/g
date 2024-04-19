@@ -4,7 +4,7 @@
 
 .adv{
 	margin: auto;
-	width: 70%;
+	max-width: 70%;
 }
 
 #qr-code-input-copy-icon-div {
