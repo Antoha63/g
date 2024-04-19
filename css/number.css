@@ -5,6 +5,11 @@
     margin-top: 7%;
 }
 
+.adv{
+	margin: auto;
+	width: 70%;
+}
+
 #generate-number-button {
     width: 40%;
     min-width: 100px;
