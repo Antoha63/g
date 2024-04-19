@@ -2,6 +2,11 @@
     margin-top: 7%;
 }
 
+.adv{
+	margin: auto;
+	width: 70%;
+}
+
 #qr-code-input-copy-icon-div {
     display: flex;
     margin: 10px;
