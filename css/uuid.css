@@ -2,6 +2,14 @@
     margin-top: 7%;
 }
 
+.overview{
+    position: relative;
+}
+.adv{
+	margin: auto;
+	max-width: 70%;
+}
+
 #uuid-result {
     font-size: 30px;
     display: flex;
